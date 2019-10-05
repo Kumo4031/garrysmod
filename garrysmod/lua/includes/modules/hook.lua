@@ -123,3 +123,12 @@ function Call( name, gm, ... )
 	return GamemodeFunction( gm, ... )        
 	
 end
+
+--[[---------------------------------------------------------
+    Name: Exists
+    Args: string hookName, identifier
+    Desc: Checks if a hook exists based on the hook and identifier.
+-----------------------------------------------------------]]
+function Exists( hook, identifier )
+	return isfunction(Hooks[hook][identifier])
+end
